@@ -35,6 +35,29 @@ public static class SimpleFunctions
 
         return dict; 
     }
-    
-    
+
+
+
+    public static List<int>[] GetIntData(string filename)
+    {
+
+        string filePath = "C:\\Users\\westh\\repos\\c#\\adventofcode2024\\tasks\\in_data\\" + filename; 
+        string[] fileContents =
+            File.ReadAllLines(filePath);
+        List<int>[] dataLists = new List<int>[fileContents.Length]; 
+        
+        
+        for (int index=0; index<fileContents.Length;index++)
+        {
+            var line = fileContents[index]; 
+            var data = line.Split(" ", StringSplitOptions.RemoveEmptyEntries);
+            foreach (var element in data)
+            {
+                dataLists[index].Add( int.Parse(element));
+            }
+        }
+        return dataLists;
+    }
+
+
 }
