@@ -1,5 +1,6 @@
 namespace tasks;
 using System.Collections; 
+using System.Linq; 
 public static class SimpleFunctions
 {
     public static int simpleNorm(List<int> x,List<int> y)
@@ -44,7 +45,8 @@ public static class SimpleFunctions
         string filePath = "C:\\Users\\westh\\repos\\c#\\adventofcode2024\\tasks\\in_data\\" + filename; 
         string[] fileContents =
             File.ReadAllLines(filePath);
-        List<int>[] dataLists = new List<int>[fileContents.Length]; 
+        List<int>[] dataLists = Enumerable.Range(0, fileContents.Length).Select(_ => new List<int>()).ToArray();
+ 
         
         
         for (int index=0; index<fileContents.Length;index++)
@@ -53,11 +55,23 @@ public static class SimpleFunctions
             var data = line.Split(" ", StringSplitOptions.RemoveEmptyEntries);
             foreach (var element in data)
             {
+                
                 dataLists[index].Add( int.Parse(element));
             }
         }
         return dataLists;
     }
 
+
+    public static string intListToString(List<int> myList)
+    {
+        string listRepresentation = ""; 
+        foreach (var number in myList)
+        {
+            listRepresentation += $"{number},"; 
+        }
+
+        return listRepresentation; 
+    }
 
 }
