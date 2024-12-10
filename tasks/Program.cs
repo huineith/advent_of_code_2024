@@ -15,8 +15,8 @@ using System.Text.RegularExpressions;
 // day2.ProblemTwo("day2_input.txt");
 
 //--------------------------- day3 -----------------//
-var day3 = new DayThree();
+// var day3 = new DayThree();
 // day3.Problem1("day3_input.txt");
 // day3.Problem1("testData.txt");//"day3_input1.txt");
-day3.Problem2("day3_input.txt");
+// day3.Problem2("day3_input.txt");
 
