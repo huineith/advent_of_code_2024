@@ -58,7 +58,8 @@ public class DayTwo
                 {
                     var specialCase1 = contractList(report, validityCode);
                     var specialCase2 = contractList(report, validityCode+1);
-                    var specialCase3 = contractList(report, validityCode-1); // due to possiblity of changing increasing or decreasing makeing (report[1],report[2]) valid 
+                    var specialCase3 = contractList(report, validityCode-1); 
+                    // due to possiblity of changing increasing or decreasing making (report[1],report[2]) valid even if it was flagged as invalid. 
                     
                     if (checkReportValidity(specialCase1) < 0 || checkReportValidity(specialCase2) < 0 ||checkReportValidity(specialCase3) < 0 )
                     {

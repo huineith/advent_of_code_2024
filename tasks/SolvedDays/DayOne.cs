@@ -44,7 +44,7 @@ public  class DayOne
     {
         List<List<int>> dataLists = new();
         string[] fileContents =
-            File.ReadAllLines("C:\\Users\\westh\\repos\\c#\\adventofcode2024\\tasks\\in_data\\problem1.txt");
+            File.ReadAllLines("C:\\Users\\westh\\repos\\c#\\adventofcode2024\\tasks\\in_data\\day1_input.txt");
         List<int> list1 = new();
         List<int> list2 = new();
         

@@ -62,7 +62,15 @@ public static class SimpleFunctions
         return dataLists;
     }
 
+    public static string[] GetStringData(string filename)
+    {
 
+        string filePath = "C:\\Users\\westh\\repos\\c#\\adventofcode2024\\tasks\\in_data\\" + filename; 
+        string[] fileContents =
+            File.ReadAllLines(filePath);
+       
+        return fileContents;
+    }
     public static string intListToString(List<int> myList)
     {
         string listRepresentation = ""; 
